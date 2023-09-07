@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for element in students %}
+    <ol>
+        <li>{{ element.id }}</li>
+        <li>{{ element.name }}</li>
+        <li>{{ element.password }}</li>
+    </ol>
+    {% endfor %}
+</body>
+</html>

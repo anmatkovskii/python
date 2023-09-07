@@ -1,0 +1,5 @@
+
+Name:coffe price:20.25 UAH
+Name:latte price:2.1 EUR
+Name:a price:100.25 UAH
+Name:b price:50.25 EUR

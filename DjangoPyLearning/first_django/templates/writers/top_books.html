@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top books</title>
+</head>
+<body>
+    <h2>Кращі книжки</h2>
+    <hr>
+    <ol>
+    {% for i in books %}
+
+        <li><h3>{{ i.book }}</h3><ul>
+        <li>Видано: {{ i.edit }}</li>
+        <li>Жанр: {{ i.genre }}</li>
+        <li>Автор: {{ i.author }}</li>
+        </ul></li>
+        <hr>
+
+    {% endfor %}
+    </ol>
+        <a href="{% url 'main' %}">Назад на головну</a><br>
+        <a href="{% url 'writers' %}">Письменники</a><br>
+</body>
+</html>

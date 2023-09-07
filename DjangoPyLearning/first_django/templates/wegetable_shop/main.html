@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #app {
+            width: 800px;
+            max-width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .btn-groups {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .btn-groups > .btn {
+        margin-top: 20px;
+            width: 24%;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-action {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #form-card {
+            display: none;
+        }
+
+        #form-card.show {
+            display: block;
+        }
+        h1 {
+        font-size: 32px;
+        margin: 10px;
+        }
+        h2 {
+        font-size: 25px;
+        margin: 10px;
+        }
+        p {
+        margin: 10px;
+        }
+        img {
+        max-height:200px;
+        width:auto;
+        float:left;
+        }
+
+        .shop-main{
+        width: 800px;
+        height: 220px;
+        border: 2px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+        float:left;
+        }
+        .description {
+        float:left;
+        }
+    </style>
+<body>
+<div id="app">
+    <div class="btn-groups">
+        <a href="{% url 'fruits' %}">
+        <button class="waves-effect cyan btn">
+            <i class="material-icons left">sort</i>
+            FRUITS
+        </button>
+        </a>
+        <a href="{% url 'vegetables' %}">
+        <button class="waves-effect deep-orange btn">
+            <i class="material-icons left">sort</i>
+            VEGETABLES
+        </button>
+        </a>
+    </div>
+
+    {% for element in product_list %}
+    <div class="shop-main">
+        <img src="data:image/png;base64, {{ element.image_base64 }}" alt="foto">
+        <div class="description">
+            <h1>{{ element.name }}</h1>
+            <h2>{{ element.price }}</h2>
+            <p>{{ element.description }}</p>
+            <p>{{ element.type }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

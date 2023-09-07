@@ -1,0 +1,6 @@
+Words count: 3
+Symbols count: 20
+Digits count: 10
+Vowels count: 4
+Consonants count: 4
+Punctuation marks count: 0

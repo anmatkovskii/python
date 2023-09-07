@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DB request</title>
+</head>
+<body>
+    {% for element in product_list %}
+        <img src="data:image/png;base64, {{ element.image_base64 }}" alt="foto">
+        <h1>{{ element.name }}</h1>
+        <h2>{{ element.price }}</h2>
+        <p>{{ element.description }}</p>
+    {% endfor %}
+</body>
+</html>

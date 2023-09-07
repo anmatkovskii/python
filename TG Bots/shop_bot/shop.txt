@@ -1,0 +1,3 @@
+Apples - 5
+Tomatoes - 10
+Onions - 7.50

@@ -1,0 +1,5 @@
+Number of characters in text file: 146
+Lines in your file: 10
+Vowels: 37
+Consonants: 97
+Numbers: 3

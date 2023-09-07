@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Writers</title>
+</head>
+<body>
+    <h2>Письменники</h2>
+    <hr>
+        {% for i in writers %}
+            <h3>{{ i.name }}</h3>
+            <p>Народився: {{ i.born }}</p>
+            <p>Жанр: {{ i.genre }}</p>
+            <p>Найпопулярніша робота: {{ i.book }}</p>
+            <hr>
+        {% endfor %}
+
+
+        <a href="{% url 'main' %}">Назад на головну</a><br>
+        <a href="{% url 'top_books' %}">Кращі книжки</a><br>
+</body>
+</html>
